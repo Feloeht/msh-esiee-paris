@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-  nginx-phpfpm:
+  web:
     image: feloeht/controverse-ogm:latest
     ports:
      - 30080:80
