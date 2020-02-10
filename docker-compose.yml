@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  nginx-phpfpm:
+    image: feloeht/controverse-ogm:latest
+    ports:
+     - 30080:80
+     - 30443:443
+    networks:
+     - default
+    logging:
+      driver: json-file
+    deploy:
+      placement:
+        constraints:
+         - node.role == manager
+networks:
+  default:
+    driver: overlay
