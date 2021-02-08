@@ -9,10 +9,6 @@ services:
      - default
     logging:
       driver: json-file
-    deploy:
-      placement:
-        constraints:
-         - node.role == manager
 networks:
   default:
     driver: overlay
